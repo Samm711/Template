@@ -1,0 +1,57 @@
+
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=50mm]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{fancyhdr}
+\usepackage{changepage}
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{comment}
+\usepackage{graphicx}
+\usepackage{lipsum}
+\graphicspath{ {./images/} }
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.16}
+\usepackage[
+backend=biber,
+style=alphabetic,
+sorting=ynt
+]{biblatex}
+
+\addbibresource{.bib}
+
+\usepackage{needspace}
+\newlength\tindent
+\setlength{\tindent}{\parindent}
+\setlength{\parindent}{0pt}
+\renewcommand{\indent}{\hspace*{\tindent}}
+
+\makeatletter
+\renewcommand{\section}{\needspace{.25\textheight} \@startsection{section}{1}{0mm}
+  {\baselineskip}
+  {\baselineskip}{\Large\bfseries\scshape}}
+\renewcommand{\subsection}{\needspace{.15\textheight} \@startsection{subsection}{1}{0mm}
+  {\baselineskip}
+  {\baselineskip}{\large\bfseries\scshape}}
+\makeatother
+
+\title{}
+\author{}
+\date{}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{.25pt}
+\renewcommand{\footrulewidth}{.25pt}
+
+
+\fancyhf{}
+\rhead{ $\vert$ $\vert$}
+
+\rfoot{Page \thepage}
+
+\begin{document}
+\maketitle
+\newpage
+
+\end{document}
